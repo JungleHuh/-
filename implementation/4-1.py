@@ -5,7 +5,7 @@ n = int(input())
 x,y = 1,1
 plans = input().split()
 #L,R,U,D (좌, 우, 상, 하)
-dx = [0,0,-1,0]
+dx = [0,0,-1,1]
 dy = [-1,1,0,0]
 move_types = ['L','R','U','D']
 
