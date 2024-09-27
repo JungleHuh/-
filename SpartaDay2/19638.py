@@ -4,7 +4,7 @@ import heapq
 input = sys.stdin.readline
 
 # 입력 받기
-N, Hcenti, T = map(int, input().split())
+N, H, T = map(int, input().split())
 heap = []
 
 # 거인들의 키를 최대 힙으로 저장 (음수로 변환해서 사용)
@@ -18,7 +18,7 @@ count = 0  # 뿅망치 사용 횟수
 while count < T:
     largest = -heapq.heappop(heap)  # 최대 힙에서 가장 큰 값을 가져옴 (양수로 변환)
     
-    if largest < Hcenti:
+    if largest < H:
         # 이미 센티보다 작으면 더 이상 할 필요 없음
         break
     
@@ -36,7 +36,7 @@ while count < T:
 # 뿅망치 사용 후 가장 큰 거인 확인
 largest_remaining = -heap[0]
 
-if largest_remaining < Hcenti:
+if largest_remaining < H:
     # 모든 거인이 센티보다 작아진 경우
     print("YES")
     print(count)
