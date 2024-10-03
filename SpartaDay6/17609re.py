@@ -10,7 +10,7 @@ def check_palindrome(s):
 
     while left < right:
         if s[left] != s[right]:
-            # 한 문자를 제거하고 회문인지 확인
+            # 한 문자를 제거하고 회문인지 확인: 둘 중에 하나만 회문이 되면 -> 한 문자가 문제고, 나머지는 문제없음을 알 수 있음
             if is_palindrome(s[left:right]) or is_palindrome(s[left+1:right+1]):
                 return 1  # 유사 회문
             else:
