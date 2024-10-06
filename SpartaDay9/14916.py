@@ -7,7 +7,7 @@ n = int(input())
 # 동전 개수 최소
 # n 일 떄 최소 동전 개수
 count = 0
-while True:
+while n>0:
     
     if n % 5 == 0:
         n = n/5

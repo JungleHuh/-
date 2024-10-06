@@ -4,19 +4,20 @@ input = sys.stdin.readline
 
 n = int(input())
 lst = []
-for i in range(n):
+
+for _ in range(n):
     num, start, end = map(int, input().split())
     lst.append((num,start,end))
 
 lst.sort(key = lambda x: x[1])
 
-class = []
+classroom = []
 
-for _. start, end, in lst:
-    if class and class[0] <= start:
-        heapq.heappop(class)
-    heapq.heappush(class, end)
+for _, start, end in lst:
+    if classroom and classroom[0] <= start:
+        heapq.heappop(classroom)
+    heapq.heappush(classroom, end)
 
-print(len(class))
+print(len(classroom))
 
 
