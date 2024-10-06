@@ -5,7 +5,7 @@ input = sys.stdin.readline
 n,m = map(int, input().split())
 
 graph = [[] for _ in range(m+1)]
-visited = [False] * 10
+visited = [False] * 100001
 
 # 사이클이 없드아..!
 for i in range(m):
@@ -30,8 +30,17 @@ def bfs(graph, R, visited):
 
 bfs(graph, 1, visited)
 
-for i in range(1, n+1):
-    if visited[i]
+for i in fan_node:
+    if visited[i]:
+        print('Yes')
+        break
+    else:
+        print('yes')
 
+### 생각해보니까, 아건 BFS로 하면 안되고, DFS로 해야겠다.
+# BFS로 한 이유는, 팬_노드가 없는 칸만  찾으면 되겠다고 생각했는데, 문제 이해를 잘못했다.
+# DFS로 팬이 없는 칸으로 끝까지 갈 수 있는 경로를 확인하는 것이 문제.
+# 큐에 모든 경우의 수 넣고 빼는 BFS로는 경로 추적이 불가능하다.
+# DFS로 끝 경로 기록하면서 하는 방식으로 풀어야겠다. 
 
             
